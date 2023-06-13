@@ -395,26 +395,40 @@ const pizzas = [
 
 // # 4. Ecrire une fonction qui prend en parametre un tableau de pizzas et qui retourne un tableau de tous les ingredients, en evitant les elements dupliques
 
-const getAllIngredients = (pizzaArr) => {
-    const ingredientsSet = new Set();
+// const getAllIngredients = (pizzaArr) => {
+//     const ingredientsSet = new Set();
 
-    for (let i = 0; i < pizzaArr.length; i++) {
-        const ingredients = pizzaArr[i].ingredients;
-        for (let j = 0; j < ingredients.length; j++) {
-            ingredientsSet.add(ingredients[j]);
-        }
-    }
+//     for (let i = 0; i < pizzaArr.length; i++) {
+//         const ingredients = pizzaArr[i].ingredients;
+//         for (let j = 0; j < ingredients.length; j++) {
+//             ingredientsSet.add(ingredients[j]);
+//         }
+//     }
 
-    const uniqueIngredients = Array.from(ingredientsSet);
-    return uniqueIngredients;
-}
+//     const uniqueIngredients = Array.from(ingredientsSet);
+//     return uniqueIngredients;
+// }
 
-const allIngredients = getAllIngredients(pizzas);
-console.log(allIngredients);
+// const allIngredients = getAllIngredients(pizzas);
+// console.log(allIngredients);
 
 // AUTRE CORRECTION
 
+// const result = getAllIngredients(pizzas)
+// console.log(result);
+// function getAllIngredients(tableau) {
+//     let allIngredients = [];
 
+//     for (let i = 0; i < tableau.length; i++) {
+//         const currentPizza = tableau[i];
+//         for (let j = 0; j < currentPizza.ingredients.length; j++) {
+//             if (!allIngredients.includes(currentPizza.ingredients[j])) {
+//                 allIngredients.push(currentPizza.ingredients[j])
+//             }
+//         }
+//     }
+//     return allIngredients;
+// }
 
 
 // # 5. Ecrire une fonction qui prend en parametre un ingredient et qui retourne un tableau des noms des pizzas qui ont cet ingredient
@@ -436,5 +450,21 @@ console.log(allIngredients);
 // const pizzasWithIngredient = getPizzasByIngredient(ingredient);
 // console.log(pizzasWithIngredient);
 
+// AUTRE CORRECTION
 
+// const result = getPizzasByIngredientName(`tomate`, pizzas);
+// console.log(result);
+
+// function getPizzasByIngredientName(ingredientName, arr) {
+//     let pizzaNames = []
+
+//     for (let i = 0; i < pizzas.length; i++) {
+//         const currentPizza = arr[i]
+//         if (currentPizza.ingredients.includes(ingredientName)) {
+//             pizzaNames.push(currentPizza.name)
+//         }
+//     }
+
+//     return pizzaNames
+// }
 
